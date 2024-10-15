@@ -9,7 +9,7 @@
     <meta content="Design & Develop by EY & Compagny" name="description" />
     <meta content="EY & Compagny" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ url('') }}/admin/assets/images/logo-boca.png">
+    <link rel="shortcut icon" href="{{ url('') }}/admin/assets/images/marwa.jpeg">
 
     <!-- DataTables -->
     <link href="{{ url('') }}/admin/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />

@@ -10,10 +10,10 @@
                 <div class="navbar-brand-box">
                     <a href="#" class="logo logo-light">
                         <span class="logo-sm">
-                            <img src="{{ url('') }}/admin/assets/images/logo-boca.png" alt="" height="22">
+                            <img src="{{ url('') }}/admin/assets/images/marwa.jpeg" alt="" height="22">
                         </span>
                         <span class="logo-lg">
-                            <img src="{{ url('') }}/admin/assets/images/logo-boca.png" alt="" height="60">
+                            <img src="{{ url('') }}/admin/assets/images/marwa.jpeg" alt="" height="60">
                         </span>
                     </a>
                 </div>

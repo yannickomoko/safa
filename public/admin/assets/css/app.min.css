@@ -216,7 +216,7 @@ body[data-topbar=dark] .app-search span {
 }
 
 body[data-sidebar=dark] .navbar-brand-box {
-    background: rgb(65,140,105);
+    background: rgb(13,169,204);
 }
 
 body[data-sidebar=dark] .logo-dark {
@@ -702,7 +702,7 @@ body[data-layout=horizontal] .footer {
 }
 
 body[data-sidebar=dark] .vertical-menu {
-    background: #127f3b;
+    background: #1B203E;
 }
 
 body[data-sidebar=dark] #sidebar-menu ul li a {
