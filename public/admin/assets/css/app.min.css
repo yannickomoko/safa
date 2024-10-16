@@ -714,15 +714,15 @@ body[data-sidebar=dark] #sidebar-menu ul li a i {
 }
 
 body[data-sidebar=dark] #sidebar-menu ul li a:hover {
-    color: #000
+    color: #0DAACC
 }
 
 body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
-    color: #000
+    color: #0DAACC
 }
 
 body[data-sidebar=dark] #sidebar-menu ul li ul.sub-menu li a {
-    color: #000
+    color: #0DAACC
 }
 
 body[data-sidebar=dark] #sidebar-menu ul li ul.sub-menu li a:hover {

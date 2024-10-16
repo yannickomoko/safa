@@ -45,4 +45,22 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    static public function getUser()
+    {
+        return User::get();
+    }
+
+    static public function getUserId($id)
+    {
+        return User::find($id);
+    }
+
+    static public function getRecord()
+    {
+        return User::select('users.*', 'roles.name as role_name')
+                    ->join('roles', 'roles.id', '=', 'users.role_id')
+                    ->orderBy('users.id', 'desc')
+                    ->get();
+    }
 }
