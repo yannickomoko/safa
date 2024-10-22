@@ -33,11 +33,13 @@
 
        @include('frontend.layout.footer')
     </div> 
-    <!-- Javascript Files
-    ================================================== -->
-    <script src="{{ url('') }}/frontend/js/plugins.js"></script>
-    <script src="{{ url('') }}/frontend/js/designesia.js"></script>
-
+    
+    @yield('scripts')
+        <!-- Javascript Files
+        ================================================== -->
+        <script src="{{ url('') }}/frontend/js/plugins.js"></script>
+        <script src="{{ url('') }}/frontend/js/designesia.js"></script>
+        
 </body>
  
 </html>

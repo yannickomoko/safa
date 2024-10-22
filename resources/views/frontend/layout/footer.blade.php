@@ -58,7 +58,7 @@
                     <div class="de-flex">
                         <div class="de-flex-col">
                             <a href="index.html">
-                                Copyright 2024 - EPSID SARL by Designed
+                                Copyright 2024 - SAFA & MARWARENTAL
                             </a>
                         </div>
                         <ul class="menu-simple">

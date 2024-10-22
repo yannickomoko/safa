@@ -18,6 +18,8 @@
 
     <link href="{{ url('') }}/admin/assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
 
+    <link href="{{ url('') }}/admin/assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+
     <!-- Responsive datatable examples -->
     <link href="{{ url('') }}/admin/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet"
         type="text/css" />
@@ -66,6 +68,8 @@
         <script src="{{ url('') }}/admin/assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
         <script src="{{ url('') }}/admin/assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
         <script src="{{ url('') }}/admin/assets/libs/select2/js/select2.min.js"></script>
+        <script src="{{ url('') }}/admin/assets/libs/dropzone/min/dropzone.min.js"></script>
+        <script src="{{ url('') }}/admin/assets/js/pages/ecommerce-select2.init.js"></script>
     
         <!-- Responsive examples -->
         <script src="{{ url('') }}/admin/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>

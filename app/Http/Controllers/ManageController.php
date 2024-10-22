@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BonPlan;
+use App\Models\Car;
+use App\Models\TypeCar;
 use Illuminate\Http\Request;
 
 class ManageController extends Controller
 {
     public function homepage()
     {
-        return view('frontend.home');
+        $data['getCars'] = Car::getCars();
+        $data['getBons'] = BonPlan::getBon();
+        return view('frontend.home', $data);
     }
 
     public function about()
@@ -23,11 +28,15 @@ class ManageController extends Controller
 
     public function location()
     {
-        return view('frontend.location-voiture');
+        $data['getCars'] = Car::getCars();
+        $data['getTypeCars'] = TypeCar::getTypeCar();
+        return view('frontend.location-voiture', $data);
     }
 
-    public function detail()
+    public function CarDetail($name)
     {
-        return view('frontend.1');
+        $car_detail = Car::getCarByName($name); 
+        //dd($detail);
+        return view('frontend.car_detail')->with('car_detail',$car_detail);
     }
 }

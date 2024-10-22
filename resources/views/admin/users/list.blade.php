@@ -1,5 +1,6 @@
 @extends('admin.page-layout')
 
+@section('title', 'UTILISATEURS')
 @section('content')
 
  <!-- ============================================================== -->
@@ -63,10 +64,10 @@
                                                 <td>
                                                     <ul class="list-unstyled hstack gap-1 mb-0">
                                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-                                                            <a href="#" class="btn btn-sm btn-info"><i class="mdi mdi-pencil-outline"></i></a>
+                                                            <a href="{{ url('admin/users/edit/'.$value->id) }}" class="btn btn-sm btn-info"><i class="mdi mdi-pencil-outline"></i></a>
                                                         </li>
                                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                            <a href="#" data-bs-toggle="modal" class="btn btn-sm btn-danger"><i class="mdi mdi-delete-outline"></i></a>
+                                                            <a href="{{ url('admin/users/delete/'.$value->id) }}" data-bs-toggle="modal" class="btn btn-sm btn-danger"><i class="mdi mdi-delete-outline"></i></a>
                                                         </li>
                                                     </ul>
                                                 </td>   

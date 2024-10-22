@@ -1,6 +1,6 @@
 @extends('frontend.page-layout')
 
-@section('title', 'Location des voitures')
+@section('title', 'SAFA MARWARENTAL | Location des voitures')
 @section('content')
 
  <!-- content begin -->
@@ -262,164 +262,32 @@
                 </div>
                 <div class="clearfix"></div>
                 <div id="items-carousel" class="owl-carousel wow fadeIn">
+                    
+                    @foreach ($getCars as $car)
                     <div class="col-lg-12">
                         <div class="de-item mb30">
                             <div class="d-img">
-                                <img src="{{ url('') }}/frontend/images/cars/7.jpg" class="img-fluid" alt="">
+                                <img src="{{ $car->image }}" class="img-fluid" alt="">
                             </div>
                             <div class="d-info">
                                 <div class="d-text">
-                                    <h4>Prado</h4>
-                                    <div class="d-item_like">
-                                        <i class="fa fa-heart"></i><span>74</span>
-                                    </div>
+                                    <h4>{{ $car->name }}</h4> 
                                     <div class="d-atr-group">
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/1-green.svg" alt="">5</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/2-green.svg" alt="">2</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/3-green.svg" alt="">4</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/4-green.svg" alt="">SUV</span>
+                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/1-green.svg" alt="">{{$car->seats}}</span>
+                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/3-green.svg" alt="">{{$car->doors}}</span>
+                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/4-green.svg" alt="">{{ $car->bodytype }}</span>
                                     </div>
                                     <div class="d-price">
-                                        Tarif journalier <span>2600/jour</span>
-                                        <a class="btn-main" href="{{ url('location-des-voitures/1') }}">Voir</a>
+                                        Tarif journalier  <span>{{ $car->price }} xaf/Jour</span>
+                                        <a class="btn-main" href="{{ url('car-detail',$car->name) }}">En savoir plus</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-12">
-                        <div class="de-item mb30">
-                            <div class="d-img">
-                                <img src="{{ url('') }}/frontend/images/cars/10.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="d-info">
-                                <div class="d-text">
-                                    <h4>Toyota Hilux</h4>
-                                    <div class="d-item_like">
-                                        <i class="fa fa-heart"></i><span>36</span>
-                                    </div>
-                                    <div class="d-atr-group">
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/1-green.svg" alt="">5</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/2-green.svg" alt="">2</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/3-green.svg" alt="">4</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/4-green.svg" alt="">Sedan</span>
-                                    </div>
-                                    <div class="d-price">
-                                        Tarif journalier <span>2400/jour</span>
-                                        <a class="btn-main" href="{{ url('location-des-voitures/1') }}">Voir</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="de-item mb30">
-                            <div class="d-img">
-                                <img src="{{ url('') }}/frontend/images/cars/8.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="d-info">
-                                <div class="d-text">
-                                    <h4>Toyota</h4>
-                                    <div class="d-item_like">
-                                        <i class="fa fa-heart"></i><span>85</span>
-                                    </div>
-                                    <div class="d-atr-group">
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/1-green.svg" alt="">5</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/2-green.svg" alt="">2</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/3-green.svg" alt="">4</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/4-green.svg" alt="">Exotic Car</span>
-                                    </div>
-                                    <div class="d-price">
-                                        Tarif journalier <span>1600/jour</span>
-                                        <a class="btn-main" href="{{ url('location-des-voitures/1') }}">Voir</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="de-item mb30">
-                            <div class="d-img">
-                                <img src="{{ url('') }}/frontend/images/cars/11.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="d-info">
-                                <div class="d-text">
-                                    <h4>Hyundai</h4>
-                                    <div class="d-item_like">
-                                        <i class="fa fa-heart"></i><span>59</span>
-                                    </div>
-                                    <div class="d-atr-group">
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/1-green.svg" alt="">5</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/2-green.svg" alt="">2</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/3-green.svg" alt="">4</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/4-green.svg" alt="">Truck</span>
-                                    </div>
-                                    <div class="d-price">
-                                        Tarif journalier <span>1700/jour</span>
-                                        <a class="btn-main" href="{{ url('location-des-voitures/1') }}">Voir</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="de-item mb30">
-                            <div class="d-img">
-                                <img src="{{ url('') }}/frontend/images/cars/hyundai2.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="d-info">
-                                <div class="d-text">
-                                    <h4>Hyundai</h4>
-                                    <div class="d-item_like">
-                                        <i class="fa fa-heart"></i><span>19</span>
-                                    </div>
-                                    <div class="d-atr-group">
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/1-green.svg" alt="">5</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/2-green.svg" alt="">2</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/3-green.svg" alt="">4</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/4-green.svg" alt="">Hatchback</span>
-                                    </div>
-                                    <div class="d-price">
-                                        Tarif journalier <span>2300/jour</span>
-                                        <a class="btn-main" href="{{ url('location-des-voitures/1') }}">Voir</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="de-item mb30">
-                            <div class="d-img">
-                                <img src="{{ url('') }}/frontend/images/cars/9.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="d-info">
-                                <div class="d-text">
-                                    <h4>Toyota pick</h4>
-                                    <div class="d-item_like">
-                                        <i class="fa fa-heart"></i><span>79</span>
-                                    </div>
-                                    <div class="d-atr-group">
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/1-green.svg" alt="">5</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/2-green.svg" alt="">2</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/3-green.svg" alt="">4</span>
-                                        <span class="d-atr"><img src="{{ url('') }}/frontend/images/icons/4-green.svg" alt="">Hatchback</span>
-                                    </div>
-                                    <div class="d-price">
-                                        Tarif journalier <span>1000/jour</span>
-                                        <a class="btn-main" href="{{ url('location-des-voitures/1') }}">Voir</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
+ 
                 </div>
-
             </div>
         </div>
     </section>
@@ -431,51 +299,22 @@
                     <h2>Bons plans et conseils sur la location de voiture</h2>
                     <div class="spacer-20"></div>
                 </div>
-                
+                @foreach ($getBons as $bon)
                 <div class="col-lg-4 mb10">
-                            <div class="bloglist s2 item">
-                                    <div class="post-content">
-                                        <div class="post-image"> 
-                                            <img alt="" src="{{ url('') }}/frontend/images/news/pic-blog-1.jpg" class="lazy">
-                                        </div>
-                                        <div class="post-text">                                                    
-                                            <h4><a href="news-single.html">Enjoy Best Travel Experience<span></span></a></h4>
-                                            <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur.</p>
-                                            <a class="btn-main" href="#">En savoir plus                </a>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                        
-                        <div class="col-lg-4 mb10">
-                            <div class="bloglist s2 item">
-                                    <div class="post-content">
-                                        <div class="post-image"> 
-                                            <img alt="" src="{{ url('') }}/frontend/images/news/pic-blog-2.jpg" class="lazy">
-                                        </div>
-                                        <div class="post-text">                                                    
-                                            <h4><a href="news-single.html">The Future of Car Rent<span></span></a></h4>
-                                            <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur.</p>
-                                            <a class="btn-main" href="#">En savoir plus                </a>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                        
-                <div class="col-lg-4 mb10">
-                <div class="bloglist s2 item">
+                    <div class="bloglist s2 item">
                         <div class="post-content">
                             <div class="post-image"> 
-                                <img alt="" src="{{ url('') }}/frontend/images/news/pic-blog-3.jpg" class="lazy">
+                                <img alt="{{ $bon->image }}" src="{{ $bon->image }}" class="lazy">
                             </div>
                             <div class="post-text">                                                    
-                                <h4><a href="news-single.html">Holiday Tips For Backpacker<span></span></a></h4>
-                                <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur.</p>
-                                <a class="btn-main" href="#">En savoir plus                </a>
+                                <h4><a href="#">{{ $bon->titre }}<span></span></a></h4>
+                                <p>{{ $bon->description }}</p>
+                                <a class="btn-main" href="#">En savoir plus</a>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
+                @endforeach
             </div>
         </div>
     </section>

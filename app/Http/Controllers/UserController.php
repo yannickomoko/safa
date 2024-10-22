@@ -39,12 +39,33 @@ class UserController extends Controller
 
     public function edit($id)
     {
+        $data['getRole'] = Role::getRole();
         $data['getRecord'] = User::getUserId($id); 
         return view('admin.users.edit', $data);
     }
 
-    public function update()
+    public function update(Request $request, $id)
     {
-         
+         $user_data = User::getUserId($id);
+
+         $user_data->name = $request->name;
+         $user_data->uname = $request->uname;
+         $user_data->phone = $request->phone;
+         $user_data->email = $request->email;
+         $user_data->role_id = $request->role_id;
+         $user_data->password = $request->password;
+
+         $user_data->save();
+
+         return redirect('admin/users')->with('success', 'User Successfully updated');
+    }
+
+    public function delete($id)
+    {
+        $user_data = User::getUserId($id);
+
+        $user_data->delete();
+
+        return redirect('admin/users')->with('success', 'User Successfully deleted');
     }
 }

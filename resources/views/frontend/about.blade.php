@@ -1,6 +1,6 @@
 @extends('frontend.page-layout')
 
-@section('title', 'Qui sommes-nous?')
+@section('title', 'SAFA MARWARENTAL | Qui sommes-nous?')
 @section('content')
 
 <!-- content begin -->
